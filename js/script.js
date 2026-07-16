@@ -146,13 +146,13 @@ function initQuotes() {
     if (!quoteTextEl || !quoteAuthorEl) return;
 
     const quotes = [
-        { text: "Consistency is more important than intensity.", author: "Lover.Zaya.Anbarasi" },
-        { text: "The path to IITM & IIScB is built with daily habits, not sudden wonders.", author: "Study Duo Mantra" },
-        { text: "Success is the sum of small effort, repeated day-in and day-out.", author: "Robert Collier" },
-        { text: "Data Science is about asking the right questions; Design is about finding the right form.", author: "GATE DA & CEED Duo" },
-        { text: "Do not wait for inspiration. Start working, and inspiration will find you.", author: "Pablo Picasso" },
-        { text: "Details are not the details. They make the design.", author: "Charles Eames" },
-        { text: "The best way to predict the future is to create it.", author: "Abraham Lincoln" }
+        { text: "Consistency is more important than intensity.", author: "Lover.Zaya" },
+        { text: "The path to IITM & IIScB is built with daily habits, not sudden wonders.", author: "Lover.Zaya" },
+        { text: "Success is the sum of small effort, repeated day-in and day-out.", author: "Lover.Zaya" },
+        { text: "Data Science is about asking the right questions; Design is about finding the right form.", author: "Lover.Zaya" },
+        { text: "Do not wait for inspiration. Start working, and inspiration will find you.", author: "Lover.Zaya" },
+        { text: "Details are not the details. They make the design.", author: "Lover.Zaya" },
+        { text: "The best way to predict the future is to create it.", author: "Lover.Zaya" }
     ];
 
     // Pick fixed quote based on day of the year
