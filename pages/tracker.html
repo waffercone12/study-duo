@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker - Study Duo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Load Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body id="tracker-page">
+
+    <!-- Floating Glowing Blobs -->
+    <div class="floating-blobs">
+        <div class="blob blob-blue"></div>
+        <div class="blob blob-pink"></div>
+    </div>
+
+    <!-- Universal Header Navbar (Subfolder relative) -->
+    <header>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                Study<span class="duo">Duo</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gate.html">GATE</a></li>
+                <li><a href="ceed.html">CEED</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tracker.html" class="active">Tracker</a></li>
+            </ul>
+
+            <div class="controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Mobile Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero & Heading -->
+    <section class="subpage-hero">
+        <span class="hero-tag">Active Dashboard</span>
+        <h1 class="subpage-title">Preparation Tracker</h1>
+        <p class="subpage-subtitle">Track daily checklists, start focus sessions with the Pomodoro timer, log study
+            hours, and monitor streak achievements.</p>
+    </section>
+
+    <!-- Main Tracker Grid -->
+    <div class="container" style="padding-top: 1rem;">
+        <div class="tracker-layout">
+
+            <!-- LEFT SECTION: Progress Metric, Goal Lists -->
+            <div class="tracker-main-panel">
+
+                <!-- Metrics Stats Row -->
+                <div class="tracker-metrics-grid">
+
+                    <!-- Stat 1: Completed Task Stats -->
+                    <div class="glass-card metric-card metric-blue">
+                        <h4
+                            style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 1px;">
+                            Completed Tasks</h4>
+                        <div class="metric-number">
+                            <span id="comp-goals-count">0</span> / <span id="rem-goals-count"
+                                style="font-size: 1.5rem; opacity: 0.6;">0</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Target tasks
+                            done</p>
+                    </div>
+
+                    <!-- Stat 2: Complete Percent Ring -->
+                    <div class="glass-card metric-card">
+                        <h4
+                            style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 1px;">
+                            Completion Rate</h4>
+                        <div class="metric-number" id="progress-percent" style="color: var(--primary-pink);">0%</div>
+                        <!-- Custom HTML Progress bar wrapper -->
+                        <div
+                            style="width: 100%; height: 6px; background: rgba(255, 255, 255, 0.05); border-radius: 3px; overflow: hidden; margin-top: 0.8rem; position: relative;">
+                            <div id="edit-progress-bar"
+                                style="height: 100%; width: 0%; background: linear-gradient(90deg, var(--primary-blue), var(--primary-pink)); transition: width 0.4s ease;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stat 3: Streak Tracker -->
+                    <div class="glass-card metric-card metric-pink">
+                        <h4
+                            style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 1px;">
+                            Work Streak</h4>
+                        <div class="metric-number streak-pulse-animation"
+                            style="color: #F59E0B; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                            <span id="streak-count">3</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="currentColor" style="color: #FBBF24;">
+                                <path
+                                    d="M12 2C12 2 12.87 5.6 15 7.6C17.13 9.6 20 10.7 20 14C20 18.4 16.4 22 12 22C7.6 22 4 18.4 4 14C4 9.17 8.35 4.54 12 2Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Consecutive
+                            active days</p>
+                    </div>
+
+                </div>
+
+                <!-- Task Checklist Manager Column -->
+                <div class="glass-card">
+                    <div class="goals-section-header">
+                        <h2 class="section-title accent-bar-blue" style="margin-bottom: 0;">Task Checklist</h2>
+
+                        <!-- Type Tabs selector in Input form -->
+                        <div
+                            style="display: flex; gap: 0.5rem; background: rgba(0,0,0,0.15); padding: 0.3rem; border-radius: 8px;">
+                            <button class="filter-btn active goal-tab" data-type="daily"
+                                style="padding: 0.35rem 0.85rem; border: none; border-radius: 6px; font-size: 0.75rem;">Daily</button>
+                            <button class="filter-btn goal-tab" data-type="weekly"
+                                style="padding: 0.35rem 0.85rem; border: none; border-radius: 6px; font-size: 0.75rem;">Weekly</button>
+                        </div>
+                    </div>
+
+                    <!-- Add goal field container -->
+                    <div class="goals-form-wrapper">
+                        <div class="goal-form">
+                            <input type="text" id="goal-inp" class="goal-input"
+                                placeholder="Add study target (e.g. Solve SVM matrix sums, Sketch layouts)...">
+                            <button id="add-goal-btn" class="btn btn-blue"
+                                style="border-radius: 12px; padding: 0.8rem 1.5rem;">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Lists split category headings -->
+                    <div style="margin-top: 1.5rem;">
+                        <h4
+                            style="font-family: var(--font-display); font-size: 0.9rem; text-transform: uppercase; color: var(--primary-blue); margin-bottom: 0.75rem; letter-spacing: 0.5px;">
+                            Daily Action Items</h4>
+                        <div class="goals-list" id="daily-goals-list">
+                            <!-- Dynamically populated via script -->
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="font-family: var(--font-display); font-size: 0.9rem; text-transform: uppercase; color: var(--primary-pink); margin-bottom: 0.75rem; letter-spacing: 0.5px;">
+                            Weekly Milestones</h4>
+                        <div class="goals-list" id="weekly-goals-list">
+                            <!-- Dynamically populated via script -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SECTION: Pomodoro, Chart, Achievements -->
+            <div class="tracker-main-panel">
+
+                <!-- Pomodoro Timer Box -->
+                <div class="glass-card pomo-card">
+                    <h2 class="section-title accent-bar-pink" style="margin-bottom: 1.5rem; font-size: 1.5rem;">Focus
+                        Session</h2>
+
+                    <!-- Mode Tabs Selector -->
+                    <div class="pomo-mode-tabs">
+                        <button class="pomo-tab active" data-duration="25">Pomodoro</button>
+                        <button class="pomo-tab" data-duration="5">Short Break</button>
+                        <button class="pomo-tab" data-duration="15">Long Break</button>
+                    </div>
+
+                    <!-- Circle timer display with rings path -->
+                    <div class="circle-progress-container">
+                        <svg class="pomo-progress-ring" width="160" height="160">
+                            <circle class="pomo-progress-ring-track" stroke="rgba(255,255,255,0.03)" stroke-width="6"
+                                fill="transparent" r="70" cx="80" cy="80" />
+                            <circle class="pomo-progress-ring-circle" stroke="var(--primary-pink)" stroke-width="6"
+                                stroke-linecap="round" fill="transparent" r="70" cx="80" cy="80" />
+                        </svg>
+                        <div class="pomo-time-overlay" id="pomo-display">25:00</div>
+                    </div>
+
+                    <!-- Controls panel triggers -->
+                    <div class="pomo-controls">
+                        <button class="btn-ctrl btn-ctrl-primary" id="pomo-start">Start</button>
+                        <button class="btn-ctrl" id="pomo-reset">Reset</button>
+                    </div>
+                </div>
+
+                <!-- Weekly Effort chart wrapper -->
+                <div class="glass-card">
+                    <h2 class="section-title accent-bar-blue" style="margin-bottom: 1.5rem; font-size: 1.5rem;">Effort
+                        Metrics</h2>
+                    <div style="height: 180px; position: relative;">
+                        <canvas id="effort-chart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Achievements & Badges Panel -->
+                <div class="glass-card">
+                    <h2 class="section-title accent-bar-pink" style="margin-bottom: 1rem; font-size: 1.5rem;">Badges &
+                        Milestones</h2>
+                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.25rem;">
+                        <span style="font-size: 0.85rem; color: var(--text-secondary);">Logged hours:</span>
+                        <strong style="color: var(--primary-blue);" id="study-hours-count">0.0</strong>
+                        <span style="font-size: 0.85rem; color: var(--text-secondary);">h</span>
+                    </div>
+
+                    <div class="achievements-grid">
+
+                        <!-- Badge 1: Completed First task -->
+                        <div class="badge-item" id="badge-first" title="Marked at least 1 goal complete.">
+                            <div class="badge-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span class="badge-name">First Strike</span>
+                        </div>
+
+                        <!-- Badge 2: Work streak milestone -->
+                        <div class="badge-item" id="badge-streak" title="Maintained a preparation streak of 3+ days.">
+                            <div class="badge-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5"></path>
+                                    <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <span class="badge-name">Streak Hero</span>
+                        </div>
+
+                        <!-- Badge 3: Study hours logged -->
+                        <div class="badge-item" id="badge-pomo" title="Logged 15+ focus hours in total.">
+                            <div class="badge-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <span class="badge-name">Pomo Elite</span>
+                        </div>
+
+                        <!-- Badge 4: All goals checked -->
+                        <div class="badge-item" id="badge-all" title="All goals checked in active task lists.">
+                            <div class="badge-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </div>
+                            <span class="badge-name">Max Clear</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Universal Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>Study Duo</h4>
+                <p>A unified portal showcasing the dedicated dual preparation journey of two aspirants gearing up for
+                    GATE Data Science & AI and CEED 2027. Crafted to perfection matching SaaS standards.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="gate.html">GATE DA Syllabus</a></li>
+                    <li><a href="ceed.html">CEED Syllabus</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="resources.html">Downloads</a></li>
+                    <li><a href="roadmap.html">Preparation Roadmaps</a></li>
+                    <li><a href="tracker.html">Study Activity Tracker</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact & Info</h5>
+                <ul>
+                    <li><a href="https://github.com/studyduo2027" target="_blank">GitHub Org</a></li>
+                    <li><a href="#" target="_blank">Study Space</a></li>
+                    <li><a href="#">About Duo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Study Duo. Built with HTML, CSS & JS. Dedicated to IITM & IIScB 2027 destinations.</p>
+            <p>Target Dates: CEED (Jan 17, 2027) & GATE (Feb 6, 2027)</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Tracker Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

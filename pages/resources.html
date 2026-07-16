@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources Hub - Study Duo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="resources-page">
+
+    <!-- Floating Glowing Blobs -->
+    <div class="floating-blobs">
+        <div class="blob blob-blue"></div>
+        <div class="blob blob-pink"></div>
+    </div>
+
+    <!-- Universal Header Navbar (Subfolder relative) -->
+    <header>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                Study<span class="duo">Duo</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gate.html">GATE</a></li>
+                <li><a href="ceed.html">CEED</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+            </ul>
+
+            <div class="controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Mobile Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="subpage-hero">
+        <span class="hero-tag">Central Repository</span>
+        <h1 class="subpage-title">Resources Hub</h1>
+        <p class="subpage-subtitle">A curated database of shared papers, study books, cheat sheets, video courses, and
+            useful links for GATE & CEED.</p>
+    </section>
+
+    <!-- Search & Catalog Filters Container -->
+    <div class="container">
+
+        <div class="filter-search-container">
+            <!-- Search Input Grid Mock -->
+            <div class="search-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="r-search" class="search-input"
+                    placeholder="Search resources (e.g., probability, perspective, linear, sketching)...">
+            </div>
+
+            <!-- Categories Pills -->
+            <div class="filters-wrapper">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="gate">GATE DA</button>
+                <button class="filter-btn filter-pink" data-filter="ceed">CEED</button>
+                <button class="filter-btn" data-filter="books">Books</button>
+                <button class="filter-btn" data-filter="github">GitHub</button>
+                <button class="filter-btn" data-filter="youtube">YouTube</button>
+                <button class="filter-btn" data-filter="websites">Portals</button>
+            </div>
+        </div>
+
+        <!-- Responsive Cards Grid -->
+        <div class="download-grid">
+
+            <!-- GATE DA 2026 Package -->
+            <div class="glass-card resource-dl-card" data-category="gate">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE DA / PYQ</span>
+                    <h3>GATE DA 2026 Exam Papers</h3>
+                    <p>Official GATE Data Science & AI entrance question paper with solved answers key.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="https://drive.google.com/file/d/1e32cH0m4ywNvsEuvs74QAs5hOooZEPx3/view?usp=sharing"
+                        target="_blank" class="dl-btn gate-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="https://practicepaper.in/gate-da/gate-da-subject-wise-previous-year-questions-with-solutions"
+                        target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answers
+                        (PP)</a>
+                </div>
+            </div>
+
+            <!-- GATE DA 2024 Package -->
+            <div class="glass-card resource-dl-card" data-category="gate">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE DA / PYQ</span>
+                    <h3>GATE DA 2024 Exam Papers</h3>
+                    <p>Official GATE Data Science & AI entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/gate_da/question_papers/DA24S1.pdf" target="_blank"
+                        class="dl-btn gate-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/gate_da/answers/DAFinalAnswerKey.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- GATE DA 2025 Package -->
+            <div class="glass-card resource-dl-card" data-category="gate">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE DA / PYQ</span>
+                    <h3>GATE DA 2025 Exam Papers</h3>
+                    <p>Official GATE Data Science & AI 2025 entrance question paper and answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/gate_da/question_papers/DA.pdf" target="_blank" class="dl-btn gate-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/gate_da/answers/DA_Keys.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- GATE DA 2025 Alternative Package -->
+            <div class="glass-card resource-dl-card" data-category="gate">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE DA / PYQ</span>
+                    <h3>GATE DA 2025 Alternative Papers</h3>
+                    <p>Alternative draft versions of GATE Data Science & AI 2025 question papers and keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/gate_da/question_papers/DA (1).pdf" target="_blank"
+                        class="dl-btn gate-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper (Alt)</a>
+                    <a href="../syllabus/gate_da/answers/DA_Keys (1).pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key (Alt)</a>
+                </div>
+            </div>
+
+            <!-- CEED 2026 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2026 Exam Papers</h3>
+                    <p>Official CEED 2026 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2026_Question_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2026_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2025 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2025 Exam Papers</h3>
+                    <p>Official CEED 2025 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2025_Question_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2025_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2024 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2024 Exam Papers</h3>
+                    <p>Official CEED 2024 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2024_Question_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2024_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2023 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2023 Exam Papers</h3>
+                    <p>Official CEED 2023 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2023_Question_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2023_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2022 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2022 Exam Papers</h3>
+                    <p>Official CEED 2022 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2022_Qestion_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2022_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2021 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2021 Exam Papers</h3>
+                    <p>Official CEED 2021 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2021_Question_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2021_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2020 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2020 Exam Papers</h3>
+                    <p>Official CEED 2020 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2020_Question_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2020_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2019 Package -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / PYQ</span>
+                    <h3>CEED 2019 Exam Papers</h3>
+                    <p>Official CEED 2019 entrance question paper with final official answer keys.</p>
+                </div>
+                <div class="dl-card-actions" style="gap: 0.5rem; justify-content: flex-end; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2019_Question_Paper.pdf" target="_blank"
+                        class="dl-btn ceed-theme-link"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px;">Q. Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2019_Answer_Key.pdf" target="_blank" class="dl-btn"
+                        style="padding: 0.5rem 0.8rem; font-size: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- Probability Notes -->
+            <div class="glass-card resource-dl-card" data-category="gate">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE DA</span>
+                    <h3>Probability Notes</h3>
+                    <p>Handwritten study sheets explaining random variables, cumulative density functions, and Bayes
+                        Theorem with solutions.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">PDF / 4.2 MB</span>
+                    <a href="https://github.com/studyduo2027/gate-notes" target="_blank" class="dl-btn gate-theme-link">
+                        Get Files
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Perspective Guide -->
+            <div class="glass-card resource-dl-card" data-category="ceed">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED</span>
+                    <h3>Perspective Drawing Guidelines</h3>
+                    <p>Illustrated workbook on one, two and three-point perspective grids. Includes bird/ant eye layouts
+                        and shadow projections.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">PDF / 8.5 MB</span>
+                    <a href="https://github.com/studyduo2027/ceed-sketches" target="_blank"
+                        class="dl-btn ceed-theme-link">
+                        Get Files
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Hands-on ML Exercises -->
+            <div class="glass-card resource-dl-card" data-category="books">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE / Books</span>
+                    <h3>Hands-on ML Code Exercises</h3>
+                    <p>Jupyter Notebook solutions to regression and classification exercises in the Aurélien Géron
+                        textbook.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">IPYNB / 2.1 MB</span>
+                    <a href="https://github.com/studyduo2027/gate-practice" target="_blank"
+                        class="dl-btn gate-theme-link">
+                        Get Files
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Design of Everyday Things -->
+            <div class="glass-card resource-dl-card" data-category="books">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / Books</span>
+                    <h3>Everyday Things Notes</h3>
+                    <p>Chapter-by-chapter conceptual summary notes on affordance, user signifiers, mapping, and feedback
+                        loops.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">PDF / 1.5 MB</span>
+                    <a href="https://github.com/studyduo2027/ceed-notes" target="_blank" class="dl-btn ceed-theme-link">
+                        Get Files
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. Linear Algebra Cheatsheet -->
+            <div class="glass-card resource-dl-card" data-category="github">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE / GitHub</span>
+                    <h3>Linear Algebra Formula Sheets</h3>
+                    <p>Quick reference markdown cheatsheet for eigenvalues, SVD matrix decomposition, and spaces
+                        transformation.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">Markdown / 45 KB</span>
+                    <a href="https://github.com/studyduo2027/gate-cheatsheets" target="_blank"
+                        class="dl-btn gate-theme-link">
+                        Get Files
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 6. CEED Sketching Scans -->
+            <div class="glass-card resource-dl-card" data-category="github">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / GitHub</span>
+                    <h3>Scanned Sketch Portfolios</h3>
+                    <p>High-resolution scans of practice drawing boards, perspectives grids, objects shading, and
+                        character poses.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">ZIP / 45 MB</span>
+                    <a href="https://github.com/studyduo2027/ceed-sketches" target="_blank"
+                        class="dl-btn ceed-theme-link">
+                        Get Files
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 7. GFG Syllabus Links -->
+            <div class="glass-card resource-dl-card" data-category="websites">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE / Website</span>
+                    <h3>GFG GATE DS & AI Index</h3>
+                    <p>Importable CSV file containing organized links for study materials and syllabus articles on
+                        GeeksforGeeks.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">CSV / 12 KB</span>
+                    <a href="https://www.geeksforgeeks.org/gate-data-science-and-artificial-intelligence-syllabus/"
+                        target="_blank" class="dl-btn gate-theme-link">
+                        Open URL
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="2" x2="22" y2="6"></line>
+                            <path d="M7 5H2v15h15v-5"></path>
+                            <polyline points="12 2 22 2 22 12"></polyline>
+                            <line x1="12" y1="12" x2="22" y2="2"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 7b. Google Sheet Study Guide -->
+            <div class="glass-card resource-dl-card" data-category="websites">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE / Website</span>
+                    <h3>GATE DA Study Guide</h3>
+                    <p>Google Sheet mapping playlists, recommendations, textbooks, and free previous year questions.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">Link / 1 KB</span>
+                    <a href="https://docs.google.com/spreadsheets/d/13d_yEzcMis4eu-p5cklONOPnmidcd81Ytu6ourMz-gs/edit?gid=1371296628#gid=1371296628"
+                        target="_blank" class="dl-btn gate-theme-link">
+                        Open URL
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="2" x2="22" y2="6"></line>
+                            <path d="M7 5H2v15h15v-5"></path>
+                            <polyline points="12 2 22 2 22 12"></polyline>
+                            <line x1="12" y1="12" x2="22" y2="2"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 8. Pinterest Sketches Grid -->
+            <div class="glass-card resource-dl-card" data-category="websites">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / Website</span>
+                    <h3>Pinterest Grids Curations</h3>
+                    <p>Hyperlinks index detailing the most helpful reference image boards on Pinterest for industrial
+                        sketching layout.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">Link / 1 KB</span>
+                    <a href="https://www.pinterest.com/" target="_blank" class="dl-btn ceed-theme-link">
+                        Open URL
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="2" x2="22" y2="6"></line>
+                            <path d="M7 5H2v15h15v-5"></path>
+                            <polyline points="12 2 22 2 22 12"></polyline>
+                            <line x1="12" y1="12" x2="22" y2="2"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 8b. PracticePaper Solved PYQ Portal -->
+            <div class="glass-card resource-dl-card" data-category="websites">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE / Website</span>
+                    <h3>PracticePaper Solved PYQs</h3>
+                    <p>Free online portal containing topic-wise previous year questions (2024 to 2025) and detailed
+                        study solutions.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">Website / 1 KB</span>
+                    <a href="https://practicepaper.in/gate-da/gate-da-subject-wise-previous-year-questions-with-solutions"
+                        target="_blank" class="dl-btn gate-theme-link">
+                        Open URL
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="2" x2="22" y2="6"></line>
+                            <path d="M7 5H2v15h15v-5"></path>
+                            <polyline points="12 2 22 2 22 12"></polyline>
+                            <line x1="12" y1="12" x2="22" y2="2"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 9. Machine Learning YouTube Playlists -->
+            <div class="glass-card resource-dl-card" data-category="youtube">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-gate">GATE / YouTube</span>
+                    <h3>Machine Learning Lecture Links</h3>
+                    <p>Consolidated offline links text index for reference playlists teaching calculus, PCA, and
+                        classification.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">TEXT / 5 KB</span>
+                    <a href="https://www.youtube.com/playlist?list=PLUljC9Idi5NGnEGYaByO3KN3A5hJoAM1F" target="_blank"
+                        class="dl-btn gate-theme-link">
+                        Open URL
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="2" x2="22" y2="6"></line>
+                            <path d="M7 5H2v15h15v-5"></path>
+                            <polyline points="12 2 22 2 22 12"></polyline>
+                            <line x1="12" y1="12" x2="22" y2="2"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 10. Perspective YouTube Playlists -->
+            <div class="glass-card resource-dl-card" data-category="youtube">
+                <div class="dl-card-content">
+                    <span class="dl-badge dl-badge-ceed">CEED / YouTube</span>
+                    <h3>Perspective Drawing Playlists</h3>
+                    <p>Consolidated drawing playlists index for practicing shapes rotation, lighting values, and 3D
+                        figures sketching.</p>
+                </div>
+                <div class="dl-card-actions">
+                    <span class="dl-format">Link / 1 KB</span>
+                    <a href="https://youtube.com/playlist?list=PLpQQ6h53DeIT2LpZwTogQY8_n_B3kidxh" target="_blank"
+                        class="dl-btn ceed-theme-link">
+                        Open URL
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="2" x2="22" y2="6"></line>
+                            <path d="M7 5H2v15h15v-5"></path>
+                            <polyline points="12 2 22 2 22 12"></polyline>
+                            <line x1="12" y1="12" x2="22" y2="2"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Universal Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>Study Duo</h4>
+                <p>A unified portal showcasing the dedicated dual preparation journey of two aspirants gearing up for
+                    GATE Data Science & AI and CEED 2027. Crafted to perfection matching SaaS standards.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="gate.html">GATE DA Syllabus</a></li>
+                    <li><a href="ceed.html">CEED Syllabus</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="resources.html">Downloads</a></li>
+                    <li><a href="roadmap.html">Preparation Roadmaps</a></li>
+                    <li><a href="tracker.html">Study Activity Tracker</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact & Info</h5>
+                <ul>
+                    <li><a href="https://github.com/studyduo2027" target="_blank">GitHub Org</a></li>
+                    <li><a href="#" target="_blank">Study Space</a></li>
+                    <li><a href="#">About Duo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Study Duo. Built with HTML, CSS & JS. Dedicated to IITM & IIScB 2027 destinations.</p>
+            <p>Target Dates: CEED (Jan 17, 2027) & GATE (Feb 6, 2027)</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Tracker Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

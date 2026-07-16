@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Duo – Journey to IITM & IIScB 2027</title>
+    <meta name="description"
+        content="A premium companion hub tracking the collective preparation for GATE DA 2027 and CEED 2027.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="home-page">
+
+    <!-- Floating Glowing Blobs -->
+    <div class="floating-blobs">
+        <div class="blob blob-blue"></div>
+        <div class="blob blob-middle"></div>
+        <div class="blob blob-pink"></div>
+    </div>
+
+    <!-- Universal Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                Study<span class="duo">Duo</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/gate.html">GATE</a></li>
+                <li><a href="pages/ceed.html">CEED</a></li>
+                <li><a href="pages/resources.html">Resources</a></li>
+                <li><a href="pages/roadmap.html">Roadmap</a></li>
+                <li><a href="pages/tracker.html">Tracker</a></li>
+            </ul>
+
+            <div class="controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <!-- Sun Icon for Light Mode -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon for Dark Mode -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Mobile Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Large Split Hero Section -->
+    <main class="split-hero-container">
+
+        <!-- Boy's Half (GATE DA) -->
+        <section class="hero-half hero-half-boy">
+            <div id="gate-anchor" class="hero-tag">Boy's Path • Target: IITM</div>
+            <h1 class="hero-title">GATE DA<br><span style="color: var(--primary-blue);">2027</span></h1>
+
+            <!-- Compact Countdown inside Hero -->
+            <div class="countdown-grid" id="gate-countdown" style="margin-bottom: 1.5rem; gap: 0.8rem;">
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="gate-days" style="font-size: 1.8rem; color: var(--primary-blue);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Days</span>
+                </div>
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="gate-hours" style="font-size: 1.8rem; color: var(--primary-blue);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Hrs</span>
+                </div>
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="gate-mins" style="font-size: 1.8rem; color: var(--primary-blue);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Mins</span>
+                </div>
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="gate-secs" style="font-size: 1.8rem; color: var(--primary-blue);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Secs</span>
+                </div>
+            </div>
+
+            <!-- Boy Coding/Data Science Illustration -->
+            <div class="hero-illustration">
+                <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="320" height="200" rx="12" fill="url(#boy-bg)" />
+                    <!-- Code editor window mockup -->
+                    <rect x="30" y="30" width="180" height="110" rx="8" fill="rgba(8, 17, 31, 0.75)"
+                        stroke="var(--primary-blue)" stroke-width="1.5" />
+                    <circle cx="45" cy="45" r="3" fill="#FF5F56" />
+                    <circle cx="53" cy="45" r="3" fill="#FFBD2E" />
+                    <circle cx="61" cy="45" r="3" fill="#27C93F" />
+                    <!-- Neural Net graphics -->
+                    <line x1="240" y1="50" x2="280" y2="40" stroke="rgba(92, 108, 255, 0.4)" stroke-dasharray="2 2"
+                        stroke-width="1.5" />
+                    <line x1="240" y1="50" x2="270" y2="90" stroke="rgba(92, 108, 255, 0.4)" stroke-width="1.5" />
+                    <line x1="280" y1="40" x2="270" y2="90" stroke="rgba(92, 108, 255, 0.4)" stroke-width="1.5" />
+                    <circle cx="240" cy="50" r="6" fill="var(--primary-blue)" />
+                    <circle cx="280" cy="40" r="5" fill="var(--primary-pink)" />
+                    <circle cx="270" cy="90" r="7" fill="var(--primary-blue)" />
+                    <!-- Mock code lines inside editor -->
+                    <rect x="45" y="60" width="70" height="4" rx="2" fill="var(--primary-blue)" opacity="0.8" />
+                    <rect x="45" y="70" width="110" height="4" rx="2" fill="var(--text-secondary)" opacity="0.6" />
+                    <rect x="45" y="80" width="90" height="4" rx="2" fill="var(--primary-pink)" opacity="0.8" />
+                    <rect x="45" y="90" width="130" height="4" rx="2" fill="var(--text-primary)" opacity="0.9" />
+                    <rect x="45" y="100" width="50" height="4" rx="2" fill="var(--primary-blue)" opacity="0.8" />
+                    <!-- Graph bars mock at the bottom -->
+                    <rect x="140" y="150" width="22" height="30" rx="3" fill="rgba(92, 108, 255, 0.35)" />
+                    <rect x="170" y="145" width="22" height="35" rx="3" fill="var(--primary-blue)" />
+                    <rect x="200" y="130" width="22" height="50" rx="3" fill="rgba(255, 95, 162, 0.4)" />
+                    <rect x="230" y="120" width="22" height="60" rx="3" fill="var(--primary-blue)" />
+                    <defs>
+                        <linearGradient id="boy-bg" x1="0" y1="0" x2="320" y2="200" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="rgba(92, 108, 255, 0.05)" />
+                            <stop offset="1" stop-color="rgba(8, 17, 31, 0.2)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <a href="pages/gate.html" class="btn btn-blue">Explore GATE</a>
+        </section>
+
+        <!-- Center Bridge Title ("Journey to IIT 2027") -->
+        <div class="center-divider">
+            <h2 class="center-title">Journey to IITM & IIScB 2027</h2>
+            <p class="center-subtitle">Two dreams. Two destinations. IITM & IIScB.</p>
+        </div>
+
+        <!-- Girl's Half (CEED 2027) -->
+        <section class="hero-half hero-half-girl">
+            <div id="ceed-anchor" class="hero-tag">Girl's Path • Target: IIScB</div>
+            <h1 class="hero-title">CEED<br><span style="color: var(--primary-pink);">2027</span></h1>
+
+            <!-- Compact Countdown inside Hero -->
+            <div class="countdown-grid" id="ceed-countdown" style="margin-bottom: 1.5rem; gap: 0.8rem;">
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="ceed-days" style="font-size: 1.8rem; color: var(--primary-pink);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Days</span>
+                </div>
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="ceed-hours" style="font-size: 1.8rem; color: var(--primary-pink);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Hrs</span>
+                </div>
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="ceed-mins" style="font-size: 1.8rem; color: var(--primary-pink);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Mins</span>
+                </div>
+                <div class="c-item" style="min-width: 50px;">
+                    <span class="c-val" id="ceed-secs" style="font-size: 1.8rem; color: var(--primary-pink);">--</span>
+                    <span class="c-lbl" style="font-size: 0.6rem;">Secs</span>
+                </div>
+            </div>
+
+            <!-- Girl Sketching/Design Illustration -->
+            <div class="hero-illustration">
+                <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="320" height="200" rx="12" fill="url(#girl-bg)" />
+                    <!-- Drawing board frame -->
+                    <rect x="110" y="30" width="180" height="110" rx="8" fill="rgba(8, 17, 31, 0.75)"
+                        stroke="var(--primary-pink)" stroke-width="1.5" transform="rotate(-3 200 85)" />
+                    <!-- Diagonal geometric sketching grid paths -->
+                    <line x1="125" y1="50" x2="265" y2="108" stroke="rgba(255, 95, 162, 0.3)" stroke-width="1.2"
+                        transform="rotate(-3 200 85)" />
+                    <line x1="135" y1="105" x2="265" y2="50" stroke="rgba(255, 95, 162, 0.3)" stroke-width="1.2"
+                        transform="rotate(-3 200 85)" />
+                    <!-- Sketch curves -->
+                    <path d="M 150 90 Q 200 40 250 85" stroke="var(--primary-pink)" stroke-width="2"
+                        stroke-linecap="round" transform="rotate(-3 200 85)" />
+                    <!-- Stylus/Pen pointer mock -->
+                    <path d="M 230 65 L 260 30" stroke="var(--text-primary)" stroke-width="3" stroke-linecap="round" />
+                    <circle cx="230" cy="65" r="2.5" fill="var(--primary-pink)" />
+                    <!-- Palette bubbles mock -->
+                    <circle cx="45" cy="50" r="10" fill="var(--primary-pink)" opacity="0.8" />
+                    <circle cx="65" cy="70" r="8" fill="var(--primary-blue)" opacity="0.6" />
+                    <circle cx="45" cy="95" r="12" fill="#7000FF" opacity="0.7" />
+                    <circle cx="70" cy="115" r="6" fill="#FBBF24" opacity="0.8" />
+                    <defs>
+                        <linearGradient id="girl-bg" x1="0" y1="0" x2="320" y2="200" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="rgba(255, 95, 162, 0.05)" />
+                            <stop offset="1" stop-color="rgba(8, 17, 31, 0.2)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <a href="pages/ceed.html" class="btn btn-pink">Explore CEED</a>
+        </section>
+
+    </main>
+
+    <!-- Quotes section -->
+    <div class="container" style="padding-top: 1rem; padding-bottom: 2rem;">
+        <div class="quote-box">
+            <p class="quote-text" id="quote-text">"Loading inspiration..."</p>
+            <p class="quote-author" id="quote-author">— Duo</p>
+        </div>
+    </div>
+
+    <!-- Universal Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>Study Duo</h4>
+                <p>A unified portal showcasing the dedicated dual preparation journey of two aspirants gearing up for
+                    GATE Data Science & AI and CEED 2027. Crafted to perfection matching SaaS standards.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/gate.html">GATE DA Syllabus</a></li>
+                    <li><a href="pages/ceed.html">CEED Syllabus</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="pages/resources.html">Downloads</a></li>
+                    <li><a href="pages/roadmap.html">Preparation Roadmaps</a></li>
+                    <li><a href="pages/tracker.html">Study Activity Tracker</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact & Info</h5>
+                <ul>
+                    <li><a href="https://github.com/studyduo2027" target="_blank">GitHub Org</a></li>
+                    <li><a href="#" target="_blank">Study Space</a></li>
+                    <li><a href="#">About Duo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Study Duo. Built with HTML, CSS & JS. Dedicated to IITM & IIScB 2027 destinations.</p>
+            <p>Target Dates: CEED (Jan 17, 2027) & GATE (Feb 6, 2027)</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Tracker Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

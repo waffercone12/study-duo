@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girl's Dashboard - CEED 2027 (IIScB)</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="ceed-theme">
+
+    <!-- Floating Glowing Blobs -->
+    <div class="floating-blobs">
+        <div class="blob blob-pink"></div>
+    </div>
+
+    <!-- Universal Header Navbar (Subfolder relative) -->
+    <header>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                Study<span class="duo">Duo</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gate.html">GATE</a></li>
+                <li><a href="ceed.html" class="active">CEED</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+            </ul>
+
+            <div class="controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Mobile Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero & Countdown Section -->
+    <section class="subpage-hero">
+        <span class="hero-tag">Aspirant 2 • Target: IIScB</span>
+        <h1 class="subpage-title">CEED 2027 Dashboard</h1>
+        <p class="subpage-subtitle">Common Entrance Examination for Design. Visual design grids, creative tasks,
+            recommended references, and portfolios.</p>
+
+        <div class="subpage-countdown-container">
+            <div class="countdown-box countdown-box-pink">
+                <h3>Time Remaining</h3>
+                <div class="countdown-grid" id="ceed-countdown">
+                    <div class="c-item">
+                        <span class="c-val" id="ceed-days">--</span>
+                        <span class="c-lbl">Days</span>
+                    </div>
+                    <div class="c-item">
+                        <span class="c-val" id="ceed-hours">--</span>
+                        <span class="c-lbl">Hours</span>
+                    </div>
+                    <div class="c-item">
+                        <span class="c-val" id="ceed-mins">--</span>
+                        <span class="c-lbl">Mins</span>
+                    </div>
+                    <div class="c-item">
+                        <span class="c-val" id="ceed-secs">--</span>
+                        <span class="c-lbl">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- SECTION 1: PART A SYLLABUS -->
+        <h2 class="section-title accent-bar-pink">Official Syllabus - Part A</h2>
+
+        <!-- Syllabus Infographic Display -->
+        <div class="glass-card"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; margin-bottom: 2rem; overflow: hidden; gap: 1rem;">
+            <h3 style="font-family: var(--font-display); font-size: 1.1rem; color: var(--primary-pink); margin: 0;">
+                IIScB CEED Syllabus Map</h3>
+            <img src="../syllabus/ceed.png" alt="CEED Syllabus Map"
+                style="max-width: 100%; max-height: 480px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); object-fit: contain;">
+        </div>
+
+        <div class="cards-grid">
+
+            <!-- Card 1: Visualization -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                            <circle cx="12" cy="12" r="1.5"></circle>
+                        </svg>
+                    </div>
+                    <h3>Visualization</h3>
+                </div>
+                <ul>
+                    <li>Hidden shapes detection</li>
+                    <li>Mental folding & rotation</li>
+                    <li>2D and 3D orthographic cuts</li>
+                    <li>Visual pattern detection</li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Spatial Reasoning -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
+                            <line x1="15" y1="3" x2="15" y2="21"></line>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="3" y1="15" x2="21" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3>Spatial Reasoning</h3>
+                </div>
+                <ul>
+                    <li>Volume block assembly</li>
+                    <li>Symmetry reflections</li>
+                    <li>Unfolded views mapping</li>
+                    <li>Objects intersection lines</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Scientific Knowledge -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="5" r="3"></circle>
+                            <line x1="12" y1="22" x2="12" y2="8"></line>
+                            <path d="M5 12h14"></path>
+                        </svg>
+                    </div>
+                    <h3>Scientific Knowledge</h3>
+                </div>
+                <ul>
+                    <li>Levers & pulleys systems</li>
+                    <li>Properties of materials</li>
+                    <li>Optical lenses refraction</li>
+                    <li>Basic physics & gear mechanisms</li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Observation -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <h3>Observation</h3>
+                </div>
+                <ul>
+                    <li>Visual details attention</li>
+                    <li>Patterns & textures match</li>
+                    <li>Typography styles detection</li>
+                    <li>Scale & size comparisons</li>
+                </ul>
+            </div>
+
+            <!-- Card 5: Environment -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Environment</h3>
+                </div>
+                <ul>
+                    <li>Eco friendly designs</li>
+                    <li>Natural waste degradation</li>
+                    <li>Sustainable structure products</li>
+                    <li>Climatic designs & geography</li>
+                </ul>
+            </div>
+
+            <!-- Card 6: Logical Reasoning -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                            <line x1="2" y1="20" x2="22" y2="20"></line>
+                        </svg>
+                    </div>
+                    <h3>Logical Reasoning</h3>
+                </div>
+                <ul>
+                    <li>Sequence and Series</li>
+                    <li>Analogy mapping</li>
+                    <li>Direct arguments extraction</li>
+                    <li>Visual deduction paths</li>
+                </ul>
+            </div>
+
+            <!-- Card 7: Language -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Language</h3>
+                </div>
+                <ul>
+                    <li>Grammar formatting</li>
+                    <li>Passages reading comprehension</li>
+                    <li>Design terminology vocab</li>
+                    <li>Summarization guidelines</li>
+                </ul>
+            </div>
+
+            <!-- Card 8: Creativity -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                            <path d="M12 8v8"></path>
+                            <path d="M8 12h8"></path>
+                        </svg>
+                    </div>
+                    <h3>Creativity</h3>
+                </div>
+                <ul>
+                    <li>Out-of-box concepts</li>
+                    <li>Objects unusual usages</li>
+                    <li>Metaphorical drawings</li>
+                    <li>Unusual combinations</li>
+                </ul>
+            </div>
+
+            <!-- Card 9: Art & Design -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z">
+                            </path>
+                            <path
+                                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Art & Design Hist.</h3>
+                </div>
+                <ul>
+                    <li>Major art movements</li>
+                    <li>Famous design masters</li>
+                    <li>Traditional Indian crafts</li>
+                    <li>Global logo design histories</li>
+                </ul>
+            </div>
+
+            <!-- Card 10: Design Practices -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Design Practices</h3>
+                </div>
+                <ul>
+                    <li>Ergonomic constraints</li>
+                    <li>Color palette harmonies</li>
+                    <li>Font typography hierarchies</li>
+                    <li>UI grid systems layout</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- SECTION 2: PART B SYLLABUS -->
+        <h2 class="section-title accent-bar-pink">Official Syllabus - Part B (Practical)</h2>
+        <div class="cards-grid">
+
+            <!-- Card 1: Drawing -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Drawing basics</h3>
+                </div>
+                <ul>
+                    <li>Texture rendering & shadings</li>
+                    <li>Linework and line weight control</li>
+                    <li>Human figure proportions</li>
+                    <li>Everyday objects rendering</li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Perspective -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="21 16 12 21 3 16"></polyline>
+                            <polyline points="21 12 12 17 3 12"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Perspective</h3>
+                </div>
+                <ul>
+                    <li>One-Point Perspective</li>
+                    <li>Two-Point Perspective grids</li>
+                    <li>Three-point bird/ant eye views</li>
+                    <li>Shadow projections basics</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Communication -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Communication</h3>
+                </div>
+                <ul>
+                    <li>Visual storytelling layouts</li>
+                    <li>Comic grids & dialogues</li>
+                    <li>Step-by-step instructions design</li>
+                    <li>Creative poster typography</li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Creative thinking -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.59 4.59A2 2 0 1 1 11 8H9V6h2a2 2 0 0 1-1.41-1.41z"></path>
+                            <path d="M6 9H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9h-2"></path>
+                        </svg>
+                    </div>
+                    <h3>Creativity</h3>
+                </div>
+                <ul>
+                    <li>Metaphorical sketches</li>
+                    <li>Unusual object mappings</li>
+                    <li>Design thinking iterations</li>
+                    <li>Forms abstraction</li>
+                </ul>
+            </div>
+
+            <!-- Card 5: Problem Solving -->
+            <div class="glass-card syllabus-card">
+                <div class="syllabus-card-header">
+                    <div class="syllabus-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                            </path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3>Problem Solving</h3>
+                </div>
+                <ul>
+                    <li>Ergonomic product design</li>
+                    <li>User journey flows mapping</li>
+                    <li>Design solutions generation</li>
+                    <li>Usability problems fix</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- SECTION 3: YOUTUBE SECTION -->
+        <h2 class="section-title accent-bar-pink">CEED YouTube Resources</h2>
+        <div class="youtube-grid">
+
+            <!-- Video 1 -->
+            <div class="glass-card yt-card">
+                <div class="yt-embed">
+                    <iframe src="https://www.youtube.com/embed/rv5QUBUXtFs" allowfullscreen></iframe>
+                </div>
+                <div class="yt-info">
+                    <h3 class="yt-title">CEED Prep Walkthrough</h3>
+                    <p class="yt-desc">Strategic analysis of previous CEED papers, marking schemes, and sketch review
+                        metrics.</p>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="glass-card yt-card">
+                <div class="yt-embed">
+                    <iframe src="https://www.youtube.com/embed/qz-VN7ZVnKw" allowfullscreen></iframe>
+                </div>
+                <div class="yt-info">
+                    <h3 class="yt-title">Sketching Basics</h3>
+                    <p class="yt-desc">Professional sketching tutorial highlighting light direction, shadows, and
+                        perspective lines.</p>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="glass-card yt-card">
+                <div class="yt-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLChwU4MwOaMLJiz01TTr-PeHJIzLD9akN"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="yt-info">
+                    <h3 class="yt-title">IIT Design Portal Playlist</h3>
+                    <p class="yt-desc">Design videos series outlining industrial design concepts, UI mockups, and art
+                        aesthetics.</p>
+                </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="glass-card yt-card">
+                <div class="yt-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLpQQ6h53DeIT2LpZwTogQY8_n_B3kidxh"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="yt-info">
+                    <h3 class="yt-title">Perspective Lessons</h3>
+                    <p class="yt-desc">Complete perspective lectures showcasing one, two, and three-point grids drawing.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="glass-card yt-card">
+                <div class="yt-embed">
+                    <iframe src="https://www.youtube.com/embed/I0Eibr_DTUg" allowfullscreen></iframe>
+                </div>
+                <div class="yt-info">
+                    <h3 class="yt-title">Design Thinking & Ideation</h3>
+                    <p class="yt-desc">Explains ideas creation, product workflows mapping, and layout principles.</p>
+                </div>
+            </div>
+
+            <!-- Video 6: Suggested - Kaphal Studio Part B -->
+            <div class="glass-card yt-card">
+                <div class="yt-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLChwU4MwOaML2k2kHyl_bOknwT1_TymA8"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="yt-info">
+                    <h3 class="yt-title">Kaphal Studio - Part B Prep</h3>
+                    <p class="yt-desc">Product design walkthroughs, problem solving, creative design ideation, and mock
+                        exercises.</p>
+                </div>
+            </div>
+
+            <!-- Video 7: Suggested - Perspective Drawing -->
+            <div class="glass-card yt-card">
+                <div class="yt-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLpQQ6h53DeIQ1hAczfR2Pz2y5vP-g2Y9Y"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="yt-info">
+                    <h3 class="yt-title">Design Drawing & Perspective</h3>
+                    <p class="yt-desc">Suggested tutorials focusing on rapid sketching, environment design, and correct
+                        object proportions.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECTION 4: PORTAL DIRECTORIES -->
+        <h2 class="section-title accent-bar-pink">Design Inspiration & Portals</h2>
+        <div class="source-grid">
+
+            <!-- Link 1: Official CEED -->
+            <a href="https://www.ceed.iitb.ac.in/" target="_blank" class="glass-card source-card">
+                <div class="syllabus-card-icon"
+                    style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <div class="source-details">
+                    <h4>CEED Official Web</h4>
+                    <p>CEED registration and syllabus guides</p>
+                </div>
+            </a>
+
+            <!-- Link 2: Careers360 -->
+            <a href="https://design.careers360.com/" target="_blank" class="glass-card source-card">
+                <div class="syllabus-card-icon"
+                    style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div class="source-details">
+                    <h4>Careers360 Design</h4>
+                    <p>Mock exams catalogs and dates</p>
+                </div>
+            </a>
+
+            <!-- Link 3: Behance -->
+            <a href="https://www.behance.net/" target="_blank" class="glass-card source-card">
+                <div class="syllabus-card-icon"
+                    style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z">
+                        </path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+                <div class="source-details">
+                    <h4>Behance Portfolios</h4>
+                    <p>Global UI/UX and product designs</p>
+                </div>
+            </a>
+
+            <!-- Link 4: Pinterest -->
+            <a href="https://www.pinterest.com/" target="_blank" class="glass-card source-card">
+                <div class="syllabus-card-icon"
+                    style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="source-details">
+                    <h4>Pinterest Pins</h4>
+                    <p>Visual style sheets & sketches ideas</p>
+                </div>
+            </a>
+
+            <!-- Link 5: SketchDaily -->
+            <a href="https://reference.sketchdaily.net/" target="_blank" class="glass-card source-card">
+                <div class="syllabus-card-icon"
+                    style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9"></path>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                </div>
+                <div class="source-details">
+                    <h4>SketchDaily</h4>
+                    <p>Daily pose sketching references</p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- SECTION 4.5: PAST PAPERS ARCHIVE -->
+        <h2 class="section-title accent-bar-pink">CEED Past Papers Archive</h2>
+        <div class="source-grid"
+            style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-bottom: 4rem;">
+
+            <!-- CEED 2026 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2026 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2026_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2026_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2025 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2025 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2025_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2025_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2024 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2024 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2024_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2024_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2023 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2023 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2023_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2023_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2022 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2022 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2022_Qestion_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2022_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2021 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2021 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2021_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2021_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2020 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2020 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2020_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2020_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2019 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2019 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2019_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2019_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- Link 6: Design Inspiration -->
+            <a href="https://www.designspiration.com/" target="_blank" class="glass-card source-card">
+                <div class="syllabus-card-icon"
+                    style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div class="source-details">
+                    <h4>Design Inspiration</h4>
+                    <p>Vibrant photography and layouts</p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- SECTION 4.5: PAST PAPERS ARCHIVE -->
+        <h2 class="section-title accent-bar-pink">CEED Past Papers Archive</h2>
+        <div class="source-grid"
+            style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-bottom: 4rem;">
+
+            <!-- CEED 2026 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2026 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2026_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2026_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2025 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2025 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2025_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2025_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2024 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2024 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2024_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2024_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2023 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2023 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2023_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2023_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2022 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2022 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2022_Qestion_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2022_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2021 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2021 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2021_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2021_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2020 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2020 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2020_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2020_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+            <!-- CEED 2019 Paper -->
+            <div class="glass-card resource-card"
+                style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="syllabus-card-icon"
+                        style="background: rgba(255, 95, 162, 0.15); color: var(--primary-pink); width: 36px; height: 36px; border-radius: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-display); font-weight: 600; margin: 0; font-size: 1rem;">CEED
+                            2019 Exam</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">Official papers & keys
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; width: 100%;">
+                    <a href="../syllabus/ceed/question_papers/CEED_2019_Question_Paper.pdf" target="_blank"
+                        class="btn btn-pink"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center;">Q.
+                        Paper</a>
+                    <a href="../syllabus/ceed/answers/CEED_2019_Answer_Key.pdf" target="_blank" class="btn"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 8px; flex: 1; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff;">Answer
+                        Key</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECTION 5: RECOMMENDED READS -->
+        <h2 class="section-title accent-bar-pink">Recommended Books</h2>
+        <div class="books-grid group-right">
+
+            <!-- Book 1 -->
+            <div class="book-card">
+                <div class="book-jacket">
+                    <div class="book-jacket-title">Design Drawing</div>
+                    <div class="book-jacket-author">Francis D. K. Ching</div>
+                </div>
+                <div class="book-title">Design Drawing</div>
+                <div class="book-author">Francis D. K. Ching</div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-card">
+                <div class="book-jacket">
+                    <div class="book-jacket-title">The Design of Everyday Things</div>
+                    <div class="book-jacket-author">Don Norman</div>
+                </div>
+                <div class="book-title">Everyday Things</div>
+                <div class="book-author">Don Norman</div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card">
+                <div class="book-jacket">
+                    <div class="book-jacket-title">Sketching: Drawing Techniques for Product Designers</div>
+                    <div class="book-jacket-author">Koos Eissen</div>
+                </div>
+                <div class="book-title">Sketching Tech</div>
+                <div class="book-author">Koos Eissen</div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card">
+                <div class="book-jacket">
+                    <div class="book-jacket-title">Perspective Made Easy</div>
+                    <div class="book-jacket-author">Ernest R. Norling</div>
+                </div>
+                <div class="book-title">Perspective Easy</div>
+                <div class="book-author">Ernest Norling</div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book-card">
+                <div class="book-jacket">
+                    <div class="book-jacket-title">Drawing on the Right Side of the Brain</div>
+                    <div class="book-jacket-author">Betty Edwards</div>
+                </div>
+                <div class="book-title">Right Side Drawing</div>
+                <div class="book-author">Betty Edwards</div>
+            </div>
+
+        </div>
+
+        <!-- SECTION 6: GITHUB ARCHIVE -->
+        <h2 class="section-title accent-bar-pink">Github Shared Archives</h2>
+        <div class="cards-grid">
+
+            <!-- Repo 1 -->
+            <div class="glass-card syllabus-card">
+                <h3>Sketches Logs</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem;">Scans of daily pose
+                    sketches, perspective grids, and product designs.</p>
+                <a href="https://github.com/studyduo2027/ceed-sketches" target="_blank" class="btn btn-pink"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">View Repository</a>
+            </div>
+
+            <!-- Repo 2 -->
+            <div class="glass-card syllabus-card">
+                <h3>Previous Papers</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem;">CEED Part A answers
+                    key and Part B high-scoring sketch uploads.</p>
+                <a href="https://github.com/studyduo2027/ceed-pyqs" target="_blank" class="btn btn-pink"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">View Repository</a>
+            </div>
+
+            <!-- Repo 3 -->
+            <div class="glass-card syllabus-card">
+                <h3>Study Notes</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem;">Structured markdown
+                    design history notes, material guides, and vocabulary builders.</p>
+                <a href="https://github.com/studyduo2027/ceed-notes" target="_blank" class="btn btn-pink"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">View Repository</a>
+            </div>
+
+            <!-- Repo 4 -->
+            <div class="glass-card syllabus-card">
+                <h3>Design Books</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem;">Links to public
+                    design tutorials PDFs, reference guidelines, and grids template.</p>
+                <a href="https://github.com/studyduo2027/ceed-library" target="_blank" class="btn btn-pink"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">View Repository</a>
+            </div>
+
+            <!-- Repo 5 -->
+            <div class="glass-card syllabus-card">
+                <h3>Question Banks</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem;">Curated mental
+                    folding question sets and geometric matching trials sheets.</p>
+                <a href="https://github.com/studyduo2027/ceed-qbank" target="_blank" class="btn btn-pink"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">View Repository</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Universal Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>Study Duo</h4>
+                <p>A unified portal showcasing the dedicated dual preparation journey of two aspirants gearing up for
+                    GATE Data Science & AI and CEED 2027. Crafted to perfection matching SaaS standards.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="gate.html">GATE DA Syllabus</a></li>
+                    <li><a href="ceed.html">CEED Syllabus</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="resources.html">Downloads</a></li>
+                    <li><a href="roadmap.html">Preparation Roadmaps</a></li>
+                    <li><a href="tracker.html">Study Activity Tracker</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact & Info</h5>
+                <ul>
+                    <li><a href="https://github.com/studyduo2027" target="_blank">GitHub Org</a></li>
+                    <li><a href="#" target="_blank">Study Space</a></li>
+                    <li><a href="#">About Duo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Study Duo. Built with HTML, CSS & JS. Dedicated to IITM & IIScB 2027 destinations.</p>
+            <p>Target Dates: CEED (Jan 17, 2027) & GATE (Feb 6, 2027)</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Tracker Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
