@@ -260,7 +260,8 @@ function initResourcesPage() {
             const cardCategory = card.getAttribute('data-category'); // e.g. "gate", "ceed", "books", "github", "youtube", "websites"
 
             const matchesSearch = cardTitle.includes(searchVal) || cardDesc.includes(searchVal);
-            const matchesCategory = activeCategory === 'all' || cardCategory === activeCategory;
+            const matchesCategory = activeCategory === 'all' ||
+                (cardCategory && cardCategory.split(',').map(c => c.trim()).includes(activeCategory));
 
             if (matchesSearch && matchesCategory) {
                 card.style.display = 'flex';
