@@ -146,7 +146,7 @@ function initQuotes() {
     if (!quoteTextEl || !quoteAuthorEl) return;
 
     const quotes = [
-        { text: "Consistency is more important than intensity.", author: "Linear.app philosophy" },
+        { text: "Consistency is more important than intensity.", author: "Lover.Zaya.Anbarasi" },
         { text: "The path to IITM & IIScB is built with daily habits, not sudden wonders.", author: "Study Duo Mantra" },
         { text: "Success is the sum of small effort, repeated day-in and day-out.", author: "Robert Collier" },
         { text: "Data Science is about asking the right questions; Design is about finding the right form.", author: "GATE DA & CEED Duo" },
