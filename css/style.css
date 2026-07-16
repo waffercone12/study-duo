@@ -267,6 +267,153 @@ header {
     transform-origin: left;
 }
 
+/* ── Nav Dropdown (GATE / CEED section jump) ── */
+.nav-dropdown {
+    position: relative;
+}
+
+/* Small chevron next to the trigger text */
+.nav-dropdown>a::before {
+    content: '';
+}
+
+.nav-dropdown>a .dd-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    font-style: normal;
+    font-size: 0.7rem;
+    transition: transform 0.25s ease;
+    vertical-align: middle;
+}
+
+.nav-dropdown.dropdown-open>a .dd-arrow,
+.nav-dropdown:hover>a .dd-arrow {
+    transform: rotate(180deg);
+}
+
+/* The floating dropdown panel */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 180px;
+    background: var(--nav-bg);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    z-index: 200;
+}
+
+/* Show on desktop hover */
+@media (hover: hover) {
+    .nav-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Show on touch via JS class */
+.nav-dropdown.dropdown-open .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Small caret pointer */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--nav-bg);
+    border-left: 1px solid var(--card-border);
+    border-top: 1px solid var(--card-border);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Individual dropdown items */
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.88rem !important;
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    color: var(--text-primary) !important;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-menu a::after {
+    display: none !important;
+}
+
+/* Colour themes */
+.nav-dropdown[data-theme="blue"] .dropdown-menu a:hover {
+    color: var(--primary-blue) !important;
+}
+
+.nav-dropdown[data-theme="pink"] .dropdown-menu a:hover {
+    color: var(--primary-pink) !important;
+}
+
+/* Divider between items */
+.dropdown-menu .dd-divider {
+    height: 1px;
+    background: var(--card-border);
+    margin: 0.3rem 0.9rem;
+}
+
+/* Mobile: no absolute positioning, show stacked inside mobile menu */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--card-border);
+        border-radius: 0;
+        padding: 0 0 0 1rem;
+        background: transparent;
+        backdrop-filter: none;
+        display: none;
+        margin-top: 0.3rem;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .nav-dropdown.dropdown-open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 0.4rem 0.5rem;
+    }
+}
+
+
 .controls {
     display: flex;
     align-items: center;

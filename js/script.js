@@ -3,9 +3,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initMobileMenu();
+    initNavDropdown();
     initCountdowns();
     initScrollTop();
     initQuotes();
+    initSyllabusAccordion();
 
     // Conditionally initialize page-specific scripts
     if (document.getElementById('resources-page')) {
@@ -18,6 +20,81 @@ document.addEventListener('DOMContentLoaded', () => {
         initRoadmapPage();
     }
 });
+
+/* ==========================================
+   NAV DROPDOWN (touch / click toggle)
+   ========================================== */
+function initNavDropdown() {
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
+    if (!dropdowns.length) return;
+
+    dropdowns.forEach(dd => {
+        const trigger = dd.querySelector(':scope > a');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', (e) => {
+            // On hover-capable devices CSS handles it; use JS only for touch
+            const isTouch = window.matchMedia('(hover: none)').matches;
+            if (!isTouch) return; // desktop: let the link work normally
+
+            const isOpen = dd.classList.contains('dropdown-open');
+            // Close all first
+            dropdowns.forEach(d => d.classList.remove('dropdown-open'));
+
+            if (!isOpen) {
+                // First tap → open the dropdown, don't navigate
+                e.preventDefault();
+                dd.classList.add('dropdown-open');
+            }
+            // Second tap → dropdown was open, user tapped again = follow the link
+        });
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-dropdown')) {
+            dropdowns.forEach(d => d.classList.remove('dropdown-open'));
+        }
+    });
+}
+
+/* ==========================================
+   SYLLABUS ACCORDION
+   ========================================== */
+function initSyllabusAccordion() {
+    const cards = document.querySelectorAll('.syllabus-card');
+    if (!cards.length) return;
+
+    const CHEVRON_SVG = `<svg class="syllabus-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>`;
+
+    cards.forEach(card => {
+        const header = card.querySelector('.syllabus-card-header');
+        if (!header) return;
+
+        // Inject chevron if not already present
+        if (!header.querySelector('.syllabus-chevron')) {
+            header.insertAdjacentHTML('beforeend', CHEVRON_SVG);
+        }
+
+        // Wrap bare <ul> children (not already inside .syllabus-body) in a wrapper
+        Array.from(card.children).forEach(child => {
+            if (child.tagName === 'UL' && !child.closest('.syllabus-body')) {
+                const body = document.createElement('div');
+                body.className = 'syllabus-body';
+                card.insertBefore(body, child);
+                body.appendChild(child);
+            }
+        });
+
+        // Click to toggle
+        header.addEventListener('click', () => {
+            card.classList.toggle('is-open');
+        });
+    });
+}
 
 /* ==========================================
    THEME MANAGER

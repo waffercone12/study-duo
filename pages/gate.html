@@ -24,8 +24,24 @@
 
             <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="gate.html" class="active">GATE</a></li>
-                <li><a href="ceed.html">CEED</a></li>
+                <li class="nav-dropdown" data-theme="blue">
+                    <a href="gate.html" class="active">GATE <span class="dd-arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="gate.html#gate-syllabus">📘 Syllabus</a>
+                        <a href="gate.html#gate-youtube">▶ YouTube Playlists</a>
+                        <div class="dd-divider"></div>
+                        <a href="gate.html#gate-papers">📄 Past Papers</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown" data-theme="pink">
+                    <a href="ceed.html">CEED <span class="dd-arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="ceed.html#ceed-syllabus">🎨 Syllabus Part A</a>
+                        <a href="ceed.html#ceed-part-b">✏️ Syllabus Part B</a>
+                        <div class="dd-divider"></div>
+                        <a href="ceed.html#ceed-papers">📄 Past Papers</a>
+                    </div>
+                </li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="tracker.html">Tracker</a></li>
@@ -98,7 +114,7 @@
     <div class="container">
 
         <!-- SECTION 1: OFFICIAL COMPLETE SYLLABUS -->
-        <h2 class="section-title accent-bar-blue">Official Syllabus Topics</h2>
+        <h2 id="gate-syllabus" class="section-title accent-bar-blue">Official Syllabus Topics</h2>
 
         <!-- Syllabus Infographic Display -->
         <div class="glass-card"
@@ -728,7 +744,7 @@
         </div>
 
         <!-- SECTION 3.5: PAST PAPERS ARCHIVE -->
-        <h2 class="section-title accent-bar-blue">GATE DA Past Papers Archive</h2>
+        <h2 id="gate-papers" class="section-title accent-bar-blue">GATE DA Past Papers Archive</h2>
         <div class="source-grid"
             style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-bottom: 4rem;">
 

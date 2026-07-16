@@ -24,8 +24,24 @@
 
             <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="gate.html">GATE</a></li>
-                <li><a href="ceed.html" class="active">CEED</a></li>
+                <li class="nav-dropdown" data-theme="blue">
+                    <a href="gate.html">GATE <span class="dd-arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="gate.html#gate-syllabus">📘 Syllabus</a>
+                        <a href="gate.html#gate-youtube">▶ YouTube Playlists</a>
+                        <div class="dd-divider"></div>
+                        <a href="gate.html#gate-papers">📄 Past Papers</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown" data-theme="pink">
+                    <a href="ceed.html" class="active">CEED <span class="dd-arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="ceed.html#ceed-syllabus">🎨 Syllabus Part A</a>
+                        <a href="ceed.html#ceed-part-b">✏️ Syllabus Part B</a>
+                        <div class="dd-divider"></div>
+                        <a href="ceed.html#ceed-papers">📄 Past Papers</a>
+                    </div>
+                </li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="tracker.html">Tracker</a></li>
@@ -98,7 +114,7 @@
     <div class="container">
 
         <!-- SECTION 1: PART A SYLLABUS -->
-        <h2 class="section-title accent-bar-pink">Official Syllabus - Part A</h2>
+        <h2 id="ceed-syllabus" class="section-title accent-bar-pink">Official Syllabus - Part A</h2>
 
         <!-- Syllabus Infographic Display -->
         <div class="glass-card"
@@ -327,7 +343,7 @@
         </div>
 
         <!-- SECTION 2: PART B SYLLABUS -->
-        <h2 class="section-title accent-bar-pink">Official Syllabus - Part B (Practical)</h2>
+        <h2 id="ceed-part-b" class="section-title accent-bar-pink">Official Syllabus - Part B (Practical)</h2>
         <div class="cards-grid">
 
             <!-- Card 1: Drawing -->
@@ -637,7 +653,7 @@
         </div>
 
         <!-- SECTION 4.5: PAST PAPERS ARCHIVE -->
-        <h2 class="section-title accent-bar-pink">CEED Past Papers Archive</h2>
+        <h2 id="ceed-papers" class="section-title accent-bar-pink">CEED Past Papers Archive</h2>
         <div class="source-grid"
             style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-bottom: 4rem;">
 

@@ -28,8 +28,24 @@
 
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="pages/gate.html">GATE</a></li>
-                <li><a href="pages/ceed.html">CEED</a></li>
+                <li class="nav-dropdown" data-theme="blue">
+                    <a href="pages/gate.html">GATE <span class="dd-arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="pages/gate.html#gate-syllabus">📘 Syllabus</a>
+                        <a href="pages/gate.html#gate-youtube">▶ YouTube Playlists</a>
+                        <div class="dd-divider"></div>
+                        <a href="pages/gate.html#gate-papers">📄 Past Papers</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown" data-theme="pink">
+                    <a href="pages/ceed.html">CEED <span class="dd-arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="pages/ceed.html#ceed-syllabus">🎨 Syllabus Part A</a>
+                        <a href="pages/ceed.html#ceed-part-b">✏️ Syllabus Part B</a>
+                        <div class="dd-divider"></div>
+                        <a href="pages/ceed.html#ceed-papers">📄 Past Papers</a>
+                    </div>
+                </li>
                 <li><a href="pages/resources.html">Resources</a></li>
                 <li><a href="pages/roadmap.html">Roadmap</a></li>
                 <li><a href="pages/tracker.html">Tracker</a></li>
